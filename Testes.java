@@ -12,14 +12,13 @@ public class Testes {
     }
 
     public static void testaInstanciaLivro() {
-        Livro livro = new Livro(); 
+        Livro livro = new Livro("Clean Code", "Robert C. Martin", "Tecnologia"); 
         if (livro == null) throw new RuntimeException("Teste 1 Falhou: Livro nulo.");
     }
 
     public static void testaTituloLivro() {
-        Livro livro = new Livro();
-        livro.titulo = "Clean Code"; // Assumindo que a variável se chama 'titulo'
-        if (!"Clean Code".equals(livro.titulo)) throw new RuntimeException("Teste 2 Falhou.");
+        Livro livro = new Livro("Clean Code", "Robert C. Martin", "Tecnologia");
+        if (!"Clean Code".equals(livro.getTitulo())) throw new RuntimeException("Teste 2 Falhou.");
     }
 
     public static void testaInstanciaSistema() {
