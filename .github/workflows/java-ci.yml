@@ -16,5 +16,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Compile Java
-      run: javac Main.java
+    - name: Compilar e Testar
+      run: |
+        javac *.java
+        java Testes
